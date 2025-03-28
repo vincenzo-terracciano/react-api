@@ -37,14 +37,12 @@ function App() {
               {
                 posts.map((post, index) => (
                   <tr key={`post - ${index + 1}`}>
-                    <th scope='row'>{index + 1}</th>
-                    <td>{post.title}</td>
-                    <td>
-                      {console.log(api_endpoint + post.image)
-                      }
+                    <th className='align-middle' scope='row'>{index + 1}</th>
+                    <td className='align-middle'>{post.title}</td>
+                    <td className='align-middle'>
                       <img src={api_endpoint + post.image} alt={post.title} />
                     </td>
-                    <td>{post.content}</td>
+                    <td className='align-middle'>{post.content}</td>
                   </tr>
                 ))
               }
